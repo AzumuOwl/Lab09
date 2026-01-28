@@ -1,0 +1,150 @@
+/* ===== FUBUKI THEME ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --fubuki-blue: #7fd7ff;
+    --fubuki-blue-dark: #3bb6ff;
+    --fubuki-white: #ffffff;
+    --fubuki-bg: #f4fbff;
+    --fubuki-gray: #6b7280;
+    --fubuki-shadow: rgba(63, 181, 255, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eaf8ff, #fdfefe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1f2937;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    background: var(--fubuki-white);
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px var(--fubuki-shadow);
+    text-align: center;
+    position: relative;
+}
+
+/* fox ear accent */
+.container::before {
+    content: "❄️🦊";
+    position: absolute;
+    top: -18px;
+    left: 20px;
+    font-size: 22px;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--fubuki-blue-dark);
+}
+
+/* ===== FORMS ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 2px solid #e5f3ff;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--fubuki-blue);
+    box-shadow: 0 0 0 3px rgba(127, 215, 255, 0.35);
+}
+
+/* ===== BUTTONS ===== */
+button {
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(
+            135deg,
+            var(--fubuki-blue),
+            var(--fubuki-blue-dark)
+    );
+    color: white;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--fubuki-shadow);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--fubuki-blue-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== TEXT ===== */
+p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--fubuki-gray);
+}
+
+/* ===== RESPONSE / OUTPUT ===== */
+#response,
+pre {
+    margin-top: 16px;
+    background: var(--fubuki-bg);
+    padding: 14px;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 13px;
+    overflow-x: auto;
+    color: #1e3a5f;
+}
+
+/* ===== HOME PAGE ===== */
+#username {
+    color: var(--fubuki-blue-dark);
+    font-weight: 600;
+}
+
+/* ===== SMALL ANIMATION ===== */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+h1 {
+    animation: float 4s ease-in-out infinite;
+}
